@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       .login(credentials.email, credentials.password)
       .pipe(
         tap(user => {
-          this.store.dispatch(new Login( {user} ));
+          this.store.dispatch(new Login( { user } ));
           this.router.navigateByUrl('/courses');
         })
       )
